@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from pathlib import Path
 
-@dataclass(frozen=True)
+@dataclass(frozen = True)
 class DataIngestionConfig:
     root_dir: Path
     source_url:str
@@ -19,7 +19,7 @@ class PrepareBaseModelConfig:
     params_weights: str
     params_classes: int
 
-@dataclass
+@dataclass(frozen = True)
 class TrainingConfig:
     root_dir: Path
     trained_model_path: Path
@@ -30,3 +30,12 @@ class TrainingConfig:
     params_is_augumentation: bool
     params_image_size: list
     params_learning_rate: float
+
+@dataclass(frozen = True)
+class EvaluationConfig:
+    path_of_model: Path
+    training_data: Path
+    all_params: dict
+    mlflow_uri: str
+    params_image_size: list
+    params_batch_size: int
