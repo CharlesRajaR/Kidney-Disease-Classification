@@ -71,7 +71,7 @@ class ConfigurationManager:
 
     def get_evaluation_config(self) -> EvaluationConfig:
         eval_config = EvaluationConfig(
-            path_of_model=Path("artifacts/model_training/model.keras"),
+            path_of_model=Path("artifacts/model_training/trained_model.keras"),
             training_data = Path("artifacts/data_ingestion/kidney-ct-scan-image"),
             mlflow_uri="https://dagshub.com/rcharlesraja2003/Kidney-Disease-Classification.mlflow",
             all_params=self.params,

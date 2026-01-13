@@ -13,4 +13,4 @@ prepare_base_model:
 
 model_training:
     root_dir: artifacts/model_training
-    trained_model_path: artifacts/model_training/model.keras
+    trained_model_path: artifacts/model_training/trained_model.keras
