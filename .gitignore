@@ -147,7 +147,6 @@ cython_debug/
 .vscode/
 *.swp
 
-research/artifacts
-research/logs
+research
 artifacts
 logs

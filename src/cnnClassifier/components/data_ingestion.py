@@ -12,7 +12,7 @@ class DataIngestion:
         try: 
             dataset_url = self.config.source_url
             zip_download_dir = self.config.local_data_file
-            os.makedirs(self.config.unzip_dir, exist_ok=True)
+            
             logger.info(f"Downloading data from {dataset_url} into file {zip_download_dir}")
 
             file_id = dataset_url.split("/")[-2]
@@ -25,7 +25,7 @@ class DataIngestion:
             raise e
         
     def extract_zip_file(self):
-        
+        # os.makedirs(self.config.unzip_dir, exist_ok=True)
         unzip_path = self.config.unzip_dir
         os.makedirs(unzip_path, exist_ok=True)
         with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
