@@ -27,7 +27,9 @@ def predict_kidney_disease(image_path):
     
     #  Inference
     result = model.predict(test_image)
+    print(result)
     prediction = np.argmax(result, axis=1)
+    print(prediction)
     
     classes = ["Normal",  "Tumor"]
     return classes[prediction[0]]
